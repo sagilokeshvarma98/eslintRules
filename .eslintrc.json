@@ -54,6 +54,8 @@
 
         "no-dupe-args" : "error",
 
+        "@typescript-eslint/no-empty-interface": "error",
+
         // "no-await-in-loop" : "error",
 
         "no-cond-assign" : "error",
