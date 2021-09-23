@@ -1,0 +1,95 @@
+
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+
+        "indent" : [
+          "warn",
+          2
+        ],
+
+        "linebreak-style" : [
+          "warn",
+          "unix"
+        ],
+
+        "quotes" : [
+          "warn",
+          "single"
+        ],
+        // Testing custom rule
+        // "no-any" : "error",
+
+        "for-direction" : "error",
+
+        // Error will be shown for the console statements
+        "no-console":["warn",{"allow" : ["error"]}],   
+
+        // Error will be shown for unused variables
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+
+        "no-var" : "warn",
+
+        "eqeqeq" : "error",
+
+        "getter-return" : "warn",
+
+        "no-dupe-args" : "error",
+
+        // "no-await-in-loop" : "error",
+
+        "no-cond-assign" : "error",
+
+        "no-compare-neg-zero" : "error",
+
+        "no-constant-condition" : "error",
+
+        "no-dupe-else-if" : "error",
+
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
